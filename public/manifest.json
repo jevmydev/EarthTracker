@@ -1,0 +1,26 @@
+{
+    "name": "earthtracker",
+    "short_name": "earthtracker",
+    "description": "EarthTracker te permite rastrear y analizar todos los sismos que ocurren en Chile.",
+    "author": "Jeremy Díaz",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jevmydev/earthtracker.git"
+    },
+    "bugs": {
+        "url": "https://github.com/jevmydev/earthtracker/issues"
+    },
+    "icons": [
+        {
+            "src": "/favicon.ico",
+            "sizes": "200x200",
+            "type": "image/ico",
+            "purpose": "any maskable"
+        }
+    ],
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "id": "/index.html",
+    "start_url": "/index.html",
+    "homepage": "https://earthtracker.netlify.app/"
+}
