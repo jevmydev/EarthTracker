@@ -10,3 +10,14 @@ export const FavIcon = ({ width = "w-7", height = "h-7", fill = "fill-current" }
         </svg>
     );
 };
+
+export const ChileIcon = ({ width = "w-7", height = "h-7" }) => {
+    return (
+        <svg className={`${width} ${height}`} viewBox="0 0 6 4" fill="#fff" stroke="none">
+            <path d="m0 0h6v4H0z" />
+            <path fill="#0039a6" d="m0 2V0h2v3z" />
+            <path fill="#d72b1f" d="m0 2h6v2H0z" />
+            <path d="m1 .5.2939.9045-.7694-.559h.951l-.7694.559z" />
+        </svg>
+    );
+};
