@@ -8,7 +8,10 @@ interface QuakesListProps {
 }
 
 export const QuakesItem = ({ quake, updateHeroQuake }: QuakesListProps) => {
-    const handleClick = () => updateHeroQuake(quake.id);
+    const handleClick = () => {
+        window.scrollTo(0, 0);
+        updateHeroQuake(quake.id);
+    };
 
     return (
         <li>
