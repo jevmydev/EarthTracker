@@ -4,16 +4,15 @@ import QuakesHero from "./QuakesHero";
 import QuakesList from "./QuakesList";
 
 export const Quakes = () => {
-    const { quakes } = useQuakes();
-    const lastQuake = quakes?.at(0);
+    const { quakes, heroQuake, updateHeroQuake } = useQuakes();
 
     return (
         <section>
             <div className="max-w-screen-md mx-auto p-4 pt-6 flex flex-col gap-6 justify-between md:flex-row">
-                {quakes && lastQuake && (
+                {quakes && heroQuake && (
                     <>
-                        <QuakesHero lastQuake={lastQuake} />
-                        <QuakesList quakes={quakes} />
+                        <QuakesHero heroQuake={heroQuake} />
+                        <QuakesList quakes={quakes} updateHeroQuake={updateHeroQuake} />
                     </>
                 )}
             </div>

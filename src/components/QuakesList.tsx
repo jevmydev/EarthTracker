@@ -1,25 +1,19 @@
 import { type ListQuakesContract } from "../types";
 
-import QuakeData from "../elements/QuakeData";
+import QuakesItem from "./QuakesItem";
 
 interface QuakesListProps {
     quakes: ListQuakesContract;
+    updateHeroQuake: (id: string) => void;
 }
 
-export const QuakesList = ({ quakes }: QuakesListProps) => {
+export const QuakesList = ({ quakes, updateHeroQuake }: QuakesListProps) => {
     return (
         <div className="flex flex-col gap-4">
             <h2 className="font-bold text-5xl">Recientes</h2>
-            <ul className="flex flex-col gap-2 pt-6">
+            <ul className="flex flex-col gap-2 pt-6 overflow-auto max-h-96 pr-2">
                 {quakes.map((quake) => {
-                    return (
-                        <li key={quake.id}>
-                            <article className="border border-indigo-300 p-2 rounded w-full">
-                                <QuakeData data={quake.magnitude} isSalient isInline />
-                                <QuakeData data={quake.date} isInline />
-                            </article>
-                        </li>
-                    );
+                    return <QuakesItem key={quake.id} quake={quake} updateHeroQuake={updateHeroQuake} />;
                 })}
             </ul>
         </div>

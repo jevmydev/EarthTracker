@@ -3,10 +3,10 @@ import { type QuakesContractTypes } from "../types";
 import QuakeData from "../elements/QuakeData";
 
 interface QuakesHeroProps {
-    lastQuake: QuakesContractTypes;
+    heroQuake: QuakesContractTypes;
 }
 
-export const QuakesHero = ({ lastQuake }: QuakesHeroProps) => {
+export const QuakesHero = ({ heroQuake }: QuakesHeroProps) => {
     return (
         <div>
             <article className="flex flex-col gap-6">
@@ -15,12 +15,12 @@ export const QuakesHero = ({ lastQuake }: QuakesHeroProps) => {
                     <span className="animate-ping p-1 rounded-full bg-indigo-300"></span>
                 </header>
                 <section>
-                    <QuakeData title="Magnitud" data={lastQuake.magnitude} isSalient />
+                    <QuakeData title="Magnitud" data={heroQuake.magnitude} isSalient />
                 </section>
                 <footer>
-                    <QuakeData title="Profundidad" data={lastQuake.depth} isInline />
-                    <QuakeData title="Fecha" data={lastQuake.date} isInline />
-                    <QuakeData title="Referencia geográfica" data={lastQuake.geoRef} isInline />
+                    <QuakeData title="Profundidad" data={heroQuake.depth} isInline />
+                    <QuakeData title="Fecha" data={heroQuake.date} isInline />
+                    <QuakeData title="Referencia geográfica" data={heroQuake.geoRef} isInline />
                 </footer>
             </article>
         </div>
